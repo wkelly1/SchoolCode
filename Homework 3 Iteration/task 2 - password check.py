@@ -11,4 +11,6 @@ while i < 3 AND continueOn == True: #added continueOn to stop the program when p
         print("Password rejected")
         i = i+1
 
+print("done")
+
 
