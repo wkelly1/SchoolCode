@@ -1,12 +1,12 @@
 def multiples(table, startnum, endnum, pupilName):
     print("Hi", pupilName, "…here is your timetable")
-    for i in range(startnum, endum):
+    for i in range(startnum, endnum):
         print(table * i)
 
 
 name = input("what is your name?")
-table = input("Enter your time table?")
-startnum = input("what is your start number?")
-endnum = input("What is your end number?")
+table = int(input("Enter your time table?"))
+startnum = int(input("what is your start number?"))
+endnum = int(input("What is your end number?"))
 
 multiples(table, startnum, endnum, name)
