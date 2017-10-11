@@ -1,5 +1,5 @@
 def multiples(table, startnum, endnum, pupilName):
-    print("Hi", pupilName, "…here is your timestable")
+    print("Hi", pupilName, "…here is your timetable")
     for i in range(startnum, endum):
         print(table * i)
 
