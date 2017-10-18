@@ -2,7 +2,8 @@
 carparkSpaces = {}
 def emptyCarPark():
     carparkSpaces = {}
-    print(carparkSpaces)
+    print("Car park is now empty!")
+    #print(carparkSpaces)
 
 def parkACar():
     # takes input of registration and what space it is parked in
@@ -13,7 +14,6 @@ def parkACar():
     for key, value in carparkSpaces.items():
         if value == space:
             print("Car is already there")
-            repeat = False
             space = "full"
 
 
@@ -21,9 +21,9 @@ def parkACar():
     # if not then add the car to the dictionary
     if space != "full":
         carparkSpaces.update({regNumber: space})
-        print("Ok car has been added to list and space is free!")
+        print("Ok, car has been added to list and space is free!")
 
-    print(carparkSpaces)
+    #print(carparkSpaces)
 
 
 def removeACar():
@@ -34,21 +34,9 @@ def removeACar():
     except:
         print("That car does not exist in the carpark!")
 
-    print(carparkSpaces)
+    #print(carparkSpaces)
 
 def displayCarParkGrid():
-    dump = {}
-    for key, value in carparkSpaces.items():
-        dump.update({value[0]:value[2]})
-
-    print("1,2,3,4,5,6,7,8,9,10")
-    print("2,#,#,#,#,#,#,#,#,#,")
-    print("3,#,#,#,#,#,#,#,#,#,")
-    print("4,#,#,#,#,#,#,#,#,#,")
-    print("5,#,#,#,#,#,#,#,#,#,")
-    print("6,#,#,#,#,#,#,#,#,#,")
-
-
     print(carparkSpaces)
 
 
