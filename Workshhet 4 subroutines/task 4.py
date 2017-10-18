@@ -8,24 +8,33 @@ def emptyCarPark():
 def parkACar():
     # takes input of registration and what space it is parked in
     regNumber = input("What is the registration of the car? ")
-    space = input("please input the space you have parked the car (row,column)")
+    space = input("please input the space you have parked the car (row,column)")# "1,4"
     # checks if a car is there
+    try:
+        if int(space[:space.index(",")]) < 11 and int(space[:space.index(",")]) > -1 and int(space[space.index(",")+1:]) > -1 and int(space[space.index(",")+1:]) < 7:
 
-    for key, value in carparkSpaces.items():
-        if value == space:
-            print("Car is already there")
-            space = "full"
-
-
-
-    # if not then add the car to the dictionary
-    if space != "full":
-        carparkSpaces.update({regNumber: space})
-        print("Ok, car has been added to list and space is free!")
-
-    #print(carparkSpaces)
+            for key, value in carparkSpaces.items():
+                if value == space:
+                    print("Car is already there")
+                    space = "full"
 
 
+
+            # if not then add the car to the dictionary
+            if space != "full":
+                carparkSpaces.update({regNumber: space})
+                print("Ok, car has been added to list and space is free!")
+
+
+
+            print(carparkSpaces)
+
+        else:
+            print("That is not a car park space!")
+
+    except:
+        print("oops you typed something wrong!")
+        print()
 def removeACar():
     registration = input("What is the registration of the car you want to remove?")
     try:
