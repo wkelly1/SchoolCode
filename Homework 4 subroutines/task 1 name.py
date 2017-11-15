@@ -12,9 +12,9 @@ def addName():
 
 
 def displayList():
-    print(names)
     for elmt in names:
-        print(names.index(elmt) +1, elmt)
+
+        print(names.index(elmt) +1, elmt+"\n")
 
 
 #main program
