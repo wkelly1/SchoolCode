@@ -1,4 +1,4 @@
-# main program
+# Subroutines
 carparkSpaces = {}
 def emptyCarPark():
     carparkSpaces = {}
@@ -48,7 +48,7 @@ def removeACar():
 def displayCarParkGrid():
     print(carparkSpaces)
 
-
+#main program
 #initialise car park grid to “empty”
 #display menu of options
 
