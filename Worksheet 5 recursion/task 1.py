@@ -4,10 +4,11 @@ def sumEven(n): #this is all a-ok
             n = n+ sumEven(n-2)
             return n
         else:
+            #print("Thats an odd number!") --- only if you want to not show it when its odd
             n = sumEven(n-1) #added the n =
             return n         #then returned n so that it could be accessed and used
     return n
-print("Yo your number is: ",sumEven(10))
+print("Yo your number is: ",sumEven(11))
 
 
 print("""           _
