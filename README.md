@@ -1,2 +1,2 @@
 # SchoolCode
-This the code for my school
+This is my school code
