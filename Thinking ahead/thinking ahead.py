@@ -11,4 +11,4 @@ def findMax(listNumbers):
         return "Empty list"
 
 
-print(findMax([1]))
+print(findMax([-3,2,-1, 5]))
