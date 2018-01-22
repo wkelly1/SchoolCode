@@ -1,3 +1,7 @@
+#finds the largest number in a list of numbers
+
+
+#subroutines
 def findMax(listNumbers):
     if len(listNumbers) != 0:
         output = listNumbers[0]
@@ -10,5 +14,5 @@ def findMax(listNumbers):
     else:
         return "Empty list"
 
-
+#main program
 print(findMax([-3,2,-1, 5]))
