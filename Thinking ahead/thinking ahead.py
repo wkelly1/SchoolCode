@@ -1,3 +1,5 @@
+#Copyright 2018, Will Kelly, All rights reserved.
+
 #finds the largest number in a list of numbers
 
 
