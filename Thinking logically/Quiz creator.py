@@ -2,7 +2,19 @@
 quizQuestionsAnswers = {}
 correctQuestion = []
 
-noQuestions = input("How many questions do you want? ")
+moveOn = False
+while moveOn == False:
+    noQuestions = input("How many questions do you want? ")
+    try:
+        int(noQuestions)
+        if int(noQuestions) < 5 and int(noQuestions) > 0:
+            moveOn = True
+        else:
+            print("oops you've entered something wrong!")
+    except:
+        print("oops you've entered something wrong!")
+
+
 for i in range(int(noQuestions)):
     question = input("What is your question no.{}? ".format(i+1))
     answer1 = input("What is your first possible answer?")
