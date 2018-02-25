@@ -66,7 +66,7 @@ goAgain = "y"
 while goAgain.lower() == "y":
     print(quizAsciiArt)
     print("This is the quiz - have fun!")
-    #displaying results and runing quiz
+    #displaying results and running quiz
     print("Number of correct questions:", questions(quizQuestionsAnswers, correctQuestion))
     correctInput = False
     #check to see if they want to go again
