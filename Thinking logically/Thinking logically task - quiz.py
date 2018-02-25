@@ -11,6 +11,7 @@ quizQuestionsAnswers = {"Q1":["A1","A2","A3","A4"],
                         "Q10": ["A1", "A2", "A3", "A4"],
                         }
 
+#this is where the creator of the quiz shows which answers are the correct ones
 correctQuestion = [1,3,2,2,3,1,3,2,1,4]
 
 quizAsciiArt = """
@@ -26,16 +27,18 @@ quizAsciiArt = """
 #functions
 def questions(quizQuestionsAnswers, correctQuestion):
     noCorrectAnswers = 0
+    #iterate through the questions and answeres
     for key, value in quizQuestionsAnswers.items():
         print("question: "+key)
         print("These are your answer options: ")
         for i in value:
             print(i)
+        #taking the users input and checking if its valid
         answer = findAnswer()
 
         keys = list(quizQuestionsAnswers)
         currentQuestion = keys.index(key)
-
+        #checking whether answer is correct and adding to noCorrectAnswers
         if int(answer) == int(correctQuestion[currentQuestion]):
             print("correct\n")
             noCorrectAnswers = noCorrectAnswers +1
@@ -43,6 +46,7 @@ def questions(quizQuestionsAnswers, correctQuestion):
             print("incorrect\n")
     return noCorrectAnswers
 
+#input and check answer
 def findAnswer():
     moveOn = False
     while moveOn == False:
@@ -62,8 +66,10 @@ goAgain = "y"
 while goAgain.lower() == "y":
     print(quizAsciiArt)
     print("This is the quiz - have fun!")
+    #displaying results and runing quiz
     print("Number of correct questions:", questions(quizQuestionsAnswers, correctQuestion))
     correctInput = False
+    #check to see if they want to go again
     while correctInput == False:
         goAgain = input("Would you like to play again? (y/n)")
         if goAgain == "y" or goAgain == "n":
