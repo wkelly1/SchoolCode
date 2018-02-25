@@ -31,17 +31,7 @@ def questions(quizQuestionsAnswers, correctQuestion):
         print("These are your answer options: ")
         for i in value:
             print(i)
-        moveOn = False
-        while moveOn == False:
-            answer = input("What is your answer? (1-4)")
-            try:
-                int(answer)
-                if int(answer) < 5 and int(answer) > 0:
-                    moveOn = True
-                else:
-                    print("oops you've entered something wrong!")
-            except:
-                print("oops you've entered something wrong!")
+        answer = findAnswer()
 
         keys = list(quizQuestionsAnswers)
         currentQuestion = keys.index(key)
@@ -53,6 +43,20 @@ def questions(quizQuestionsAnswers, correctQuestion):
             print("incorrect\n")
     return noCorrectAnswers
 
+def findAnswer():
+    moveOn = False
+    while moveOn == False:
+        answer = input("What is your answer? (1-4)")
+        try:
+            int(answer)
+            if int(answer) < 5 and int(answer) > 0:
+                moveOn = True
+            else:
+                print("oops you've entered something wrong!")
+        except:
+            print("oops you've entered something wrong!")
+
+    return answer
 #main program
 goAgain = "y"
 while goAgain.lower() == "y":
