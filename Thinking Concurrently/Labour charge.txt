@@ -9,6 +9,7 @@ function labourCharge(duration)
         charge = time * 20
     endif
     return charge
+endfunction
 
 #main program
 charge = "0110"
