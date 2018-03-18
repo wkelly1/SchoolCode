@@ -1,0 +1,15 @@
+#finds charge from a duration of time
+
+#functions
+function labourCharge(duration)
+    time = int(duration) DIV 30
+    if int(duration) MOD 30 != 0 then
+        charge = (int(str(time)[:str(time).index(".")])*20)+20
+    else
+        charge = time * 20
+    endif
+    return charge
+
+#main program
+charge = "0110"
+print(labourCharge(charge))
