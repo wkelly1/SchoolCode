@@ -3,12 +3,12 @@
 #functions
 def labourCharge(duration):
     time = int(duration) / 30
-    if time != 0:
+    if int(duration) % 30 != 0:
         charge = (int(str(time)[:str(time).index(".")])*20)+20
     else:
         charge = time * 20
     return charge
 
-#main program
-charge = "0110"
+charge = "0120"
 print(labourCharge(charge))
+
