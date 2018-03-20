@@ -1,0 +1,36 @@
+procedure sweetBags():
+	correctInput = False
+	while correctInput == False
+		try:
+			numBags = int(input("Please enter the number of bags: "))
+			numSweets = int(input("Please enter the number of sweats (Note that it must be grater than number of bags): "))
+		except:
+			print("Incorrect input")
+		if numSweets < numBags then
+			print("You need to enter a number of sweats greater than the number of bags")
+
+		else
+			correctInput = True
+		endif
+	endwhile
+
+	if numSweets MOD 2 == 0 or numBags MOD 2 == 0 then
+		print("This doesn't work!")
+	else
+		print("This works!")
+	endif
+
+# main program
+runProgram = True
+while runProgram == True
+    sweetBags()
+    goAgain = input("Would you like to go again (y/n)? ")
+    if goAgain.lower() == "n" then
+        runProgram = False
+        print("Goodbye")
+    else if goAgain.lower() != "y" or goAgain.lower() != "n" then
+        print("Not correct input \nGoing again")
+    else
+        print("Ok, Starting again!")
+    endif
+endwhile
