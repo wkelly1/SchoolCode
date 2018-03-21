@@ -3,7 +3,7 @@ procedure sweetBags():
    while correctInput == False
       try:
          numBags = int(input("Please enter the number of bags: "))
-         numSweets = int(input("Please enter the number of sweats (Note that it must be grater than number of bags): "))
+         numSweets = int(input("Please enter the number of sweets (Note that it must be grater than number of bags): "))
       except:
          print("Incorrect input")
       if numSweets < numBags then
@@ -14,7 +14,7 @@ procedure sweetBags():
       endif
    endwhile
 
-   if numSweets MOD 2 == 0 or (numBags MOD 2 == 0 and numSweets MOD 2 != 0) then
+   if (numSweets MOD 2 == 0 and numBags MOD 2 !=0 )or (numBags MOD 2 == 0 and numSweets MOD 2 != 0)then
       print("This doesn't work!")
    else
       print("This works!")
