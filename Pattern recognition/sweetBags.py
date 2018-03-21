@@ -13,7 +13,7 @@ def sweetBags():
             correctInput = True
 
 
-    if numSweets % 2 == 0 or (numBags % 2 == 0 and numSweets % 2 != 0):
+    if (numSweets % 2 == 0 and numBags % 2 !=0 ) or (numBags % 2 == 0 and numSweets % 2 != 0):
         print("This doesn't work!")
     else:
         print("This works!")
