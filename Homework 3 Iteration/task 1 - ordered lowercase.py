@@ -1,4 +1,4 @@
-#order an inputed list from smallest (a) to largest (z) #
+#order an inputted list from smallest (a) to largest (z) #
 # Then print first and last element
 
 letters = []
